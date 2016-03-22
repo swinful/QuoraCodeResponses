@@ -31,7 +31,7 @@
                                 <color key="backgroundColor" red="0.64835027720000005" green="0.67088101919999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button 4"/>
                                 <connections>
-                                    <segue destination="Xgz-Fl-hFz" kind="showDetail" identifier="ShowButton4" id="xV2-ya-YI5"/>
+                                    <segue destination="Xgz-Fl-hFz" kind="showDetail" identifier="" id="xV2-ya-YI5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyI-TV-Mxl">
@@ -170,6 +170,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="xV2-ya-YI5"/>
+        <segue reference="mkE-G1-hqA"/>
     </inferredMetricsTieBreakers>
 </document>

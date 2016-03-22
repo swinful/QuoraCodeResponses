@@ -12,20 +12,17 @@ class ViewController: UIViewController {
   
   let breakfast = ["Pancakes", "Bacon & Eggs", "Grits", "Oatmeal", "Cream of Wheat"]
   let lunch     = ["Salmon & Rice", "Chicken & Rice", "Potatoes & Veggies", "Pizza", "Burger & Fries"]
-  let dinner    = ["Salad", "Pasta", "Tea & Crackers", "Milk & Cookies", "Fried Eggs"]
+  let dinner    = ["Salad", "Pasta", "Tea & Crackers", "Milk & Cookies",]
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     
     // var destination = segue.destinationViewController as? UIViewController
-    if let ourNavigationController = segue.destinationViewController as? UINavigationController { // destination as? UINavigationController
-      // destination = ourNavigationController.visibleViewController
+    if let ourNavigationController = segue.destinationViewController as? UINavigationController {
     
-      // As we transition to the detail view controller, ensure the destination is the
-      // ArrayDetailViewController.
-      // if let advc = destination as? ArrayDetailViewController
+      // The detail view is the TableViewController. Below is how we obtain it if it exists as 
+      // well as its properties.
       if let advc = ourNavigationController.visibleViewController as? TableViewController {
         
-        // The identifier may not be set
         if let identifier = segue.identifier {
           switch identifier {
           case "ShowBreakfast":

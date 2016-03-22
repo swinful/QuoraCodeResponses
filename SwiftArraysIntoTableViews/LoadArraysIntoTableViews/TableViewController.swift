@@ -16,7 +16,7 @@ class TableViewController: UIViewController, UITableViewDataSource {
   
   // MARK: UITableViewDataSource protocol implementations
   func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-    return 1 // Displaying a single section
+    return 1 // Single section table
   }
   
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
