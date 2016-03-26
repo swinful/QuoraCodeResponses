@@ -12,7 +12,8 @@ class TableViewController: UIViewController, UITableViewDataSource {
   
   // MARK: Member variables
   var menuTitle: String?
-  var menuItems = [String]()
+  var menuItems   = [String]()
+  var itemsDetail = [String:String]()
   
   // MARK: UITableViewDataSource protocol implementations
   func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -33,7 +34,12 @@ class TableViewController: UIViewController, UITableViewDataSource {
     
     for (key, _) in menuItems.enumerate() {
       if indexPath.row == key {
+        print("IndexPath.row == \(key)")
+        print("menuItems[\(key)] == \(menuItems[key])")
         cell.textLabel!.text = menuItems[key]
+        if let detail = itemsDetail[menuItems[key]] {
+          cell.detailTextLabel!.text = detail
+        }
       }
     }
     

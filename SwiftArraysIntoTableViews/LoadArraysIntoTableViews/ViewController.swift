@@ -13,6 +13,12 @@ class ViewController: UIViewController {
   let breakfast = ["Pancakes", "Bacon & Eggs", "Grits", "Oatmeal", "Cream of Wheat"]
   let lunch     = ["Salmon & Rice", "Chicken & Rice", "Potatoes & Veggies", "Pizza", "Burger & Fries"]
   let dinner    = ["Salad", "Pasta", "Tea & Crackers", "Milk & Cookies",]
+  let dinnerDetails = [
+    "Salad" : "Fresh Romain lettuce & Crutons w/ French dressing.",
+    "Pasta" : "Vegetable pasta w/ cheeses of sorts.",
+    "Tea & Crackers" : "Chineese green tea w/ dab or honey and crackers",
+    "Milk & Cookies" : "Our kids favorite. Yummy, goodie Chocolate Cookies."
+  ]
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     
@@ -26,16 +32,17 @@ class ViewController: UIViewController {
         if let identifier = segue.identifier {
           switch identifier {
           case "ShowBreakfast":
-            advc.menuTitle = "Breakfast"
-            advc.menuItems = breakfast
+            advc.menuTitle   = "Breakfast"
+            advc.menuItems   = breakfast
             
           case "ShowLunch":
-            advc.menuTitle = "Lunch"
-            advc.menuItems = lunch
+            advc.menuTitle   = "Lunch"
+            advc.menuItems   = lunch
             
           case "ShowDinner":
-            advc.menuTitle = "Dinner"
-            advc.menuItems = dinner
+            advc.menuTitle   = "Dinner"
+            advc.menuItems   = dinner
+            advc.itemsDetail = dinnerDetails
             
           case "ShowButton4":
             advc.menuTitle = "Button 4"
